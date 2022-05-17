@@ -26,7 +26,7 @@ add_value_label(df.learning_mode, a)
 plt.plot(df.learning_mode, a, color='skyblue', linestyle='solid', label='학습 모드별 %')
 
 # y축 눈금 출력 단위 설정
-plt.yticks(np.arange(0, df.learning_mode_count.max(), 50))
+plt.yticks(np.arange(0, df.learning_mode_count.max(), 10))
 
 # add_value_label
 add_value_label(df.learning_mode, df.learning_mode_count)

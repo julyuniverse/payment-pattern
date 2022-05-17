@@ -26,8 +26,11 @@ plt.plot(df.rownum, learning_data_count_mean, color='blue', linestyle='solid', l
 learning_data_count_median = [df.learning_data_count.median()] * len(df.rownum)
 plt.plot(df.rownum, learning_data_count_median, color='skyblue', linestyle='solid', label='중앙값')
 
+# x축 눈금 출력 단위 설정
+plt.xticks(np.arange(0, df.rownum.max(), 1))
+
 # y축 눈금 출력 단위 설정
-plt.yticks(np.arange(0, df.learning_data_count.max(), 50))
+plt.yticks(np.arange(0, df.learning_data_count.max(), 5))
 
 # Float to Int
 a = np.array(learning_data_count_mean, dtype=int)

@@ -25,9 +25,11 @@ plt.plot(df.rownum, attendance_count_mean, color='blue', linestyle='solid', labe
 attendance_count_median = [df.attendance_count.median()] * len(df.rownum)
 plt.plot(df.rownum, attendance_count_median, color='skyblue', linestyle='solid', label='중앙값')
 
+# x축 눈금 출력 단위 설정
+plt.xticks(np.arange(0, df.rownum.max(), 1))
 
 # y축 눈금 출력 단위 설정
-plt.yticks(np.arange(0, df.attendance_count.max(), 5))
+plt.yticks(np.arange(0, df.attendance_count.max(), 1))
 
 # Float to Int
 a = np.array(attendance_count_mean, dtype=int)
